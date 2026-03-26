@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catch the Box – Code Explanation</title>
+    <link rel="stylesheet" href="assignment.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Catch the box — Documentation</h1>
+    </header>
+      <div class="actions">
+        <!-- Back button wired by assignment.js to navigate back to the assignment page -->
+        <button id="button2" type="button">Back to Game</button>
+      </div>
+      <!-- Container: layout wrapper for the text article and preview image -->
+      <section id="container">
+        <article class="text">
+          <h2>Catch the Box – Code Explanation</h2>
+
+          <h3>1. HTML Structure</h3>
+          <p>
+            HTML defines the structure of the webpage. Inside the
+            <code>body</code>, there is a navigation button, a container which
+            holds explanatory text, and a preview image for the game.
+          </p>
+
+          <h3>2. Container</h3>
+          <p>
+            The <code>#container</code> element groups the main content and uses
+            CSS Flexbox for a two-column layout. Background, border-radius, and
+            box-shadow create a card-like appearance.
+          </p>
+
+          <h3>3. Text Section</h3>
+          <p>
+            Headings, paragraphs, and lists are used to explain the game
+            mechanics and structure in a readable, accessible way.
+          </p>
+
+          <h3>4. Image</h3>
+          <p>
+            The image is a visual preview of the game. CSS controls its size and
+            presentation.
+          </p>
+
+          <h3>5. CSS Styling</h3>
+          <ul>
+            <li>Set fonts and background color</li>
+            <li>Center the container</li>
+            <li>Use Flexbox for layout</li>
+            <li>Apply shadows and rounded corners</li>
+          </ul>
+
+          <h3>6. JavaScript Navigation</h3>
+          <p>
+            JavaScript handles page navigation. The button above uses a direct
+            location change; external script <code>assignment.js</code> handles
+            navigation back to the assignment.
+          </p>
+          <!-- Creative ideas section for grading (5 extra points) -->
+          <section id="creative-ideas">
+            <h2>My Creative Improvements</h2>
+            <ol>
+              <li>
+                Assigned <code>alt</code> attributes to images for better
+                accessibility.
+              </li>
+              <li>
+                Used Flexbox to create a two-column layout for text and images
+                for better readability.
+              </li>
+              <li>
+                Added interactive buttons using JavaScript to navigate between
+                pages smoothly.
+              </li>
+              <li>
+                Styled buttons with hover effects and colors to make the.
+                interface visually engaging.
+              </li>
+              <li>
+                If i move cursor to image, it will zoom in a little bit.
+                I used <code>transform and transition</code>
+              </li>
+              <li>
+                If you click to game image, it will direct you to the minigame page.
+                I connected text to the actual game code.
+              </li>
+            </ol>
+          </section>
+
+          <!-- Footer: author / gmail -->
+          <footer>Name: イデルハンガイ</footer>
+          <footer>gmail: s24c038b@nmct.edu.mn</footer>
+        </article>
+        <!-- Figure: visual preview of the game with caption -->
+        <div class="image-container">
+          <img
+            src="../images/code1.png"
+            alt="Second image"
+          />
+          <img
+            src="../images/code2.png"
+            alt="Third image"
+          />
+          <a class="video" href="../images/Screen Recording 2025-12-17 144246.mp4">
+             Click here to see my code
+          </a>
+        </div>
+      </section>
+    <script src="assignment.js"></script>
+  </body>
+</html>

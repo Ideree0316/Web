@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch the Box Game</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #222;
+            color: #fff;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            color: #00eaff;
+        }
+
+        #game-area {
+            position: relative;
+            width: 500px;            /* smaller width */
+            height: 500px;           /* smaller height */
+            background: #111;
+            border: 3px solid #00eaff; /* full border */
+            margin: 40px auto;       /* centers horizontally */
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .box {
+            width: 60px;
+            height: 60px;
+            background: #ff4d6d;
+            position: absolute;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #score {
+            font-size: 22px;
+            margin-top: 10px;
+        }
+
+        #startBtn {
+            padding: 10px 20px;
+            background: #00eaff;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        #startBtn:hover {
+            background: #00bcd4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Catch the Box!</h1>
+    <p id="score">Score: 0</p>
+    <button id="startBtn" onclick="startGame()">Start Game</button>
+
+    <div id="game-area"></div>
+
+    <script>
+        let score = 0;
+        let gameRunning = false;
+        let box;
+
+        function startGame() {
+            score = 0;
+            gameRunning = true;
+            document.getElementById("score").innerText = "Score: " + score;
+
+            spawnBox();
+        }
+
+        function spawnBox() {
+            if (!gameRunning) return;
+
+            const gameArea = document.getElementById("game-area");
+
+            // Remove the previous box
+            if (box) box.remove();
+
+            // Create new box
+            box = document.createElement("div");
+            box.classList.add("box");
+
+            // Random position
+            const maxX = gameArea.clientWidth - 60;
+            const maxY = gameArea.clientHeight - 60;
+            box.style.left = Math.random() * maxX + "px";
+            box.style.top = Math.random() * maxY + "px";
+
+            // When player catches the box
+            box.onclick = () => {
+                score++;
+                document.getElementById("score").innerText = "Score: " + score;
+                spawnBox(); // Spawn new box
+            };
+
+            gameArea.appendChild(box);
+
+            // If player misses the box within 1.2 seconds → game over
+            setTimeout(() => {
+                if (gameRunning) {
+                    alert("Game Over! Your score: " + score);
+                    gameRunning = false;
+                    if (box) box.remove();
+                }
+            }, 7000);
+        }
+    </script>
+
+</body>
+</html>

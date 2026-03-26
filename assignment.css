@@ -1,0 +1,97 @@
+body {
+  font-family:Arial;
+  background: #f4f4f4;
+  padding: 30px;
+}
+/* #container is used by both assignment.html and codeexplain.html */
+#container {
+  width: 1000px;
+  margin: auto;
+  background: rgb(183, 178, 178);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+/* Image inside the container: sizing, placement and rounded corners */
+/* Keeps preview image visually aligned and constrained */
+#container img{
+  margin-top: 70px;
+  width: 400px;
+  border-radius: 10px;
+}
+h1{
+  display: flex;
+  justify-content: flex-start;
+}
+.image-container {
+  display: flex;
+  flex-direction: column; /* stacks images vertically */
+  gap: 15px;              /* space between images */
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;     
+}
+.image-container img:hover {
+  transform: scale(1.05); /* zooms in the image slightly on hover */
+}
+/* footer will place in the bottom center */
+footer {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+  text-align: center;
+  color: rgb(0, 105, 150);
+}
+/* the gap between ul and li */
+#container ol li {
+  margin-bottom: 8px;
+}
+#container ul li {
+  margin-bottom: 8px;
+}
+
+.actions button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.actions button:hover {
+  background-color: #ff8533;
+  cursor: pointer;
+}
+/* Buttons style */
+.actions button, #button1 {
+  background-color: #ff6600; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Hover effect */
+.actions button:hover, #button1:hover {
+  background-color: #ff8533; 
+}
+.video{
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #415468;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+.video:hover {
+  transform: scale(1.05);
+}

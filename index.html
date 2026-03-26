@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+    <!-- Link to shared styles used by both assignment and code explanation pages -->
+    <link rel="stylesheet" href="assignment.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Page heading: visible title for the documentation page -->
+      <h1>Catch the Box — Documentation</h1>
+    </header>
+
+    <!-- Primary action: navigate to the code explanation page -->
+    <button id="button1">Go to Explanation</button>
+
+    <!-- Main content container holding text and image preview -->
+    <div id="container">
+      <div class="text">
+        <h1>Catch the box</h1>
+        <h2>About the game</h2>
+        <p>
+          Catch the Box is a simple yet fun mini-game that tests your speed, focus, and reaction time. When the game starts, a colored square appears 
+          at a random position on the screen. Your goal is to click and “catch” the square as quickly as possible.
+          If player misses the box within 1.2 seconds, game will over.
+          The square keeps appearing in different positions at short time, so players must react fast. 
+          Each time you successfully catch the square, your score increases. Try to catch as many as you can to achieve the highest score! 
+        </p>
+
+        <h2>How to Play</h2>
+        <ul>
+          <li>Click the picture of the game.</li>
+          <li>Click Start Game to begin.</li>
+          <li>Watch for the box that appears in random spots on the screen.</li>
+          <li>Click the box as fast as you can to score points.</li>
+          <li>The box will keep moving, so stay focused and be quick.</li>
+          <li>Aim for the highest score and challenge yourself to beat it!</li>
+        </ul>
+
+        <!-- Page footer / author info -->
+        <footer>Name: イデルハンガイ</footer>
+        <footer>gmail: s24c038b@nmct.edu.mn</footer>
+      </div>
+
+      <!-- Clickable preview image that links into the actual minigame -->
+      <a class="image-container" href="minigame.html">
+        <!-- Screenshot preview: alt describes the image for accessibility -->
+        <img
+          src="./images/game.png"
+          alt="First image"
+        />
+      </a>
+    </div>
+
+    <!-- Script that wires button navigation between pages -->
+    <script src="assignment.js"></script>
+  </body>
+</html>
